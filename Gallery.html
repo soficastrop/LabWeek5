@@ -1,81 +1,70 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Pet Adoption Service</title>
-        <link rel="stylesheet" href="style.css"> 
-    </head>
-    <body>
-        <!-- Container to wrap everything -->
-        <div id="container">
-           <!-- Began Main Navigation -->
-           <header>Miami Pet Adoption Service</header>
-           <nav>
+<head>
+    <title>Pet Adoption Service</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header>Miami Pet Adoption Service</header>
+        <nav>
             <ul>
                 <li><a href="About.html">About</a></li>
                 <li><a href="Contact.html">Contact</a></li>
                 <li><a href="Gallery.html">Gallery</a></li>
             </ul>
-           </nav>
-           <!-- End Main Navigation -->
-            <!-- Begin Main Content -->
-           <main>
-               <h1>Adopt a New Best Friend Today!</h1>
-               <h2>Miami Pet Adoption - Gallery</h2>
+        </nav>
+
+        <main>
+            <h1>Adopt a New Best Friend Today!</h1>
+            <h2>Miami Pet Adoption - Gallery</h2>
             <br/>
-<section id="gallery"></section>
 
-           </main>
-           <!-- End Main Content --> 
-        </div>
-        <!-- End Container --> 
-
-        <!-- Floating Info Box -->
-    <div id="info-box" class="hidden">
-        <h2 id="info-title"></h2>
-        <p id="info-text"></p>
-        <a href="#" id="close-info">Click This To Close</a>
+            <section id="gallery">
+                <a href="images/pets1.jpg" class="lightbox-toggle">
+                    <img src="images/pets1.jpg" alt="Pet 1">
+                </a>
+                <a href="images/pets2.jpg" class="lightbox-toggle">
+                    <img src="images/pets2.jpg" alt="Pet 2">
+                </a>
+                <a href="images/pets3.jpg" class="lightbox-toggle">
+                    <img src="images/pets3.jpg" alt="Pet 3">
+                </a>
+                <a href="images/pets4.jpg" class="lightbox-toggle">
+                    <img src="images/pets4.jpg" alt="Pet 4">
+                </a>
+                <a href="images/pets5.jpg" class="lightbox-toggle">
+                    <img src="images/pets5.jpg" alt="Pet 5">
+                </a>
+                <a href="images/pets6.jpg" class="lightbox-toggle">
+                    <img src="images/pets6.jpg" alt="Pet 6">
+                </a>
+                <a href="images/pets7.jpg" class="lightbox-toggle">
+                    <img src="images/pets7.jpg" alt="Pet 7">
+                </a>
+                <a href="images/pets8.jpg" class="lightbox-toggle">
+                    <img src="images/pets8.jpg" alt="Pet 8">
+                </a>
+                <a href="images/pets9.jpg" class="lightbox-toggle">
+                    <img src="images/pets9.jpg" alt="Pet 9">
+                </a>
+                <a href="images/pets10.jpg" class="lightbox-toggle">
+                    <img src="images/pets10.jpg" alt="Pet 10">
+                </a>
+            </section>
+        </main>
     </div>
 
-        <script>
+    <!-- Lightbox -->
+    <div class="backdrop"></div>
+<div class="lightbox">
+    <span class="close">x</span>
+    <img src="" class="lightbox-content">
+</div>
 
-         var photos = []; // Declared empty variable
-         var fileNames = []; // Declared empty element
-         var imageList = []; // Declared empty array
-         var image = []; // Declared an empty variable for the list codes
-         var openList = "<li class='photo'>"; // Declared variable for open tag for list
-         var closeList = "</li>"; // Declared variable for close tag
+    <script src="script.js"></script>
 
-// Example captions and descriptions for each image
-var captions = [
-  "Caption 1", "Caption 2", "Caption 3", "Caption 4", "Caption 5", 
-  "Caption 6", "Caption 7", "Caption 8", "Caption 9", "Caption 10"
-];
-var descriptions = [
-  "Description 1", "Description 2", "Description 3", "Description 4", "Description 5",
-  "Description 6", "Description 7", "Description 8", "Description 9", "Description 10"
-];
-
-// Create a loop for the images
-for (var i = 0; i < 10; i++) {
-    fileNames.push("pets" + (i + 1)); // Create image filename and store in array
-    photos.push("<img src='images/" + fileNames[i] + ".jpg' alt='" + captions[i] + "'>"); // Assemble the filename for the image
-    var caption = "<closeCaption>" + captions[i] + "</closeCaption>"; // Caption for image
-    var description = "<closeDesc>" + descriptions[i] + "</closeDesc>"; // Description for image
-
-    image = openList + photos[i] + caption + description + closeList; // Assemble image, caption, and description
-    imageList.push(image); // Storing the assembled code into the array
-}
-
-// Display images with captions and descriptions
-document.getElementById("gallery").innerHTML = imageList.join("");
-
-        </script>
-
-
-
-
-
-    </body> 
-    <!-- Footer Information -->
     <footer>&copy; Copyright 2025</footer>
+</body>
 </html>
